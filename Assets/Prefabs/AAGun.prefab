@@ -3501,7 +3501,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 1
     collisionMode: 0
@@ -4713,6 +4713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   range: 200
+  elevationrange: 1
 --- !u!1 &4270549655098120870
 GameObject:
   m_ObjectHideFlags: 0
