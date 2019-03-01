@@ -4,44 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering.PostProcessing;
 
-public class Movement : MonoBehaviour
+public class AltMovement : Movement
 {
-    [System.NonSerialized]
-    public bool paused;
-
-    public float maxRoll = 90f;
-    public float baseSpeed = 75f;
-    public float thrust = 1.5f;
-    public float thrustRestingPoint = 1.5f;
-    public float maxthrust = 5f;
-    public float minthrust = 0.25f;
-
-
-    //makes controls more like a joystick
-    public bool invertPitchControls = true;
-
-    //components
-    public Text altitudeText;
-    public Text thrustText;
-
-
-    //vfx and sfx 
-    protected Rigidbody rb;
-    protected Vignette vignette;
-    public PostProcessProfile postProcessProfile;
-    protected AudioSource audioSource;
-
-
-
-    //for getting mouse position on screen
-    protected readonly float centerOfScreenX = Screen.width / 2;
-    protected readonly float centerOfScreenY = Screen.height / 2;
-    protected float mouseX;
-    protected float mouseY;
-
-    Vector3 rotateValue;
-    Vector3 rollValue;
-
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -54,12 +19,11 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Debug.Log(GetMousePercentageX());
         if (!paused)
         {
             //movement variables
             float x; float y; float z;
-
+            Vector3 rotateValue;
 
             //mouse input
             GetMousePosNormalized();
@@ -120,17 +84,9 @@ public class Movement : MonoBehaviour
             }
 
             //rotation
-            /*
-            rotateValue = new Vector3(0, x * -1.5f, z); //(0, yaw, roll)
+            rotateValue = new Vector3(0, x * -1.5f, z);
             transform.localEulerAngles = transform.localEulerAngles - rotateValue;
-            transform.Rotate(2*y, 0, 0, Space.Self); // pitch
-            */
-            rotateValue = new Vector3(0, x * -1.5f, 0); //yaw
-            transform.localEulerAngles = transform.localEulerAngles - rotateValue;
-
-            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, maxRoll * GetMousePercentageX()); //roll
-
-            transform.Rotate(2 * y, 0, 0, Space.Self); // pitch
+            transform.Rotate(2*y, 0, 0, Space.Self);
 
             //forward thrust
             rb.MovePosition(transform.position + transform.forward * baseSpeed * thrust * Time.deltaTime);
@@ -140,47 +96,6 @@ public class Movement : MonoBehaviour
 
     }
 
-    protected void GetMousePosNormalized()
-    {
-        mouseY = 4f * (Input.mousePosition.y - centerOfScreenY) / Screen.height;
-        mouseX = 4f * (Input.mousePosition.x - centerOfScreenX) / Screen.width;
-
-        //Debug.Log(Input.mousePosition.x + "/" + Screen.width);
-    }
-
-    protected float GetMousePercentageX()
-    {
-        float centerPoint = Screen.width / 2; //e.g. 1920/2
-
-        float mousePosX = Input.mousePosition.x;
-        float relativeMousePosX = Input.mousePosition.x - centerPoint;
-        float mousePercent = relativeMousePosX / centerPoint;
-
-        return mousePercent * -1;
-    }
-
-    protected void UpdateUI()
-    {
-        altitudeText.text = "ALT\n" + transform.position.y;
-        thrustText.text = "SPEED\n" + thrust * 1000f;
-        audioSource.volume = (thrust + 0.5f) / maxthrust;
-        audioSource.pitch = (thrust + 0.5f) / maxthrust;
-        
-    }
-
-    public void TogglePause()
-    {
-        if (paused)
-        {
-            audioSource.Play();
-            paused = false;
-        }
-        else
-        {
-            audioSource.Pause();
-            paused = true;
-        }
-    }
 
 
     //lol you crashed into the ground
