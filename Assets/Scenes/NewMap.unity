@@ -1736,17 +1736,17 @@ PrefabInstance:
     - target: {fileID: 4270549655098120890, guid: 9a592b4ae58bc844f89703e83739d43c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -465.19708
+      value: -425.6
       objectReference: {fileID: 0}
     - target: {fileID: 4270549655098120890, guid: 9a592b4ae58bc844f89703e83739d43c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.646492
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 4270549655098120890, guid: 9a592b4ae58bc844f89703e83739d43c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 135.45439
+      value: 182
       objectReference: {fileID: 0}
     - target: {fileID: 4270549655098120890, guid: 9a592b4ae58bc844f89703e83739d43c,
         type: 3}
@@ -4242,13 +4242,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerJet
       objectReference: {fileID: 0}
+    - target: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
+      propertyPath: altitudeText
+      value: 
+      objectReference: {fileID: 1474788604}
+    - target: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
+      propertyPath: thrustText
+      value: 
+      objectReference: {fileID: 279120932}
     - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
       propertyPath: m_LocalPosition.x
       value: -727.8
       objectReference: {fileID: 0}
     - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.76
+      value: 26.37
       objectReference: {fileID: 0}
     - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4285,31 +4293,6 @@ PrefabInstance:
     - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: altitudeText
-      value: 
-      objectReference: {fileID: 1474788604}
-    - target: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: thrustText
-      value: 
-      objectReference: {fileID: 279120932}
-    - target: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: maxRoll
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1779440527, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023377810219233250, guid: a82b8bd77caca9d41b7475db85dd3a49,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
