@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     public bool paused;
     public bool advancedControls = false;
     public bool invertPitchControls = true;
+    public float mouseSensitivity = 1;
 
     public float maxRoll = 90f;
     public float baseSpeed = 75f;
@@ -239,7 +240,7 @@ public class Movement : MonoBehaviour
         float relativeMousePosX = Input.mousePosition.x - centerPoint;
         float mousePercent = relativeMousePosX / centerPoint;
 
-        return mousePercent * -1;
+        return mousePercent * -1 * mouseSensitivity;
     }
 
     protected void UpdateUI()
@@ -274,9 +275,11 @@ public class Movement : MonoBehaviour
             Debug.Log("Crash");
             vignette.intensity.value = 1;
         }
-        else
-        {
-            Debug.Log("Hit");
-        }
+
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        Debug.Log("Hit by particle");
     }
 }

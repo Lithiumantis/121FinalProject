@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour
             player.TogglePause();
             musicPlayer.Pause();
             pauseText.gameObject.SetActive(true);
+            Time.timeScale = 0;
             paused = true;
             
         }
@@ -36,6 +37,7 @@ public class UIManager : MonoBehaviour
             player.TogglePause();
             musicPlayer.Play();
             pauseText.gameObject.SetActive(false);
+            Time.timeScale = 1;
             paused = false;
         }
     }
