@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 11028444}
   m_Layer: 0
   m_Name: Terrain (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -261,6 +261,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 389311130}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &34555912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 34555913}
+  - component: {fileID: 34555914}
+  m_Layer: 0
+  m_Name: MenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &34555913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34555912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 808537063}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &34555914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34555912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a05d737d9958b4f43af0ac6e1088ec87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStarted: 0
+  player: {fileID: 0}
+  menuCamera: {fileID: 0}
+  playerCamera: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!4 &51412986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0,
@@ -280,7 +328,7 @@ GameObject:
   - component: {fileID: 53424289}
   m_Layer: 0
   m_Name: Terrain (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -357,6 +405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -672.5455
@@ -413,6 +465,10 @@ PrefabInstance:
     - target: {fileID: 1219351464806550, guid: 3498c2828d18a8b4090fe9dc8891c840, type: 3}
       propertyPath: m_Name
       value: rus_build_2et_01b_low (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219351464806550, guid: 3498c2828d18a8b4090fe9dc8891c840, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4457829158267990, guid: 3498c2828d18a8b4090fe9dc8891c840, type: 3}
       propertyPath: m_LocalPosition.x
@@ -471,6 +527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_5et_06_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4603655451484844, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -728.2
@@ -527,6 +587,10 @@ PrefabInstance:
     - target: {fileID: 1344908493902798, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
       propertyPath: m_Name
       value: rus_build_5et_03a_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344908493902798, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4169983903537070, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
       propertyPath: m_LocalPosition.x
@@ -603,6 +667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01_low (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -693.19
@@ -667,6 +735,105 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 988723449}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &144905965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144905969}
+  - component: {fileID: 144905968}
+  - component: {fileID: 144905967}
+  - component: {fileID: 144905966}
+  m_Layer: 5
+  m_Name: MenuCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &144905966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144905965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &144905967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144905965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &144905968
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144905965}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &144905969
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144905965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1957787922}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!4 &149832732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4144252128789790, guid: 5a675dcfe669d5e4e93d9c677c628ba6,
@@ -759,6 +926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -678.47644
@@ -839,6 +1010,10 @@ PrefabInstance:
     - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_Name
       value: rus_build_9et_03b_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4754905513684214, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1073,6 +1248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01b_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1219351464806550, guid: 3498c2828d18a8b4090fe9dc8891c840, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4457829158267990, guid: 3498c2828d18a8b4090fe9dc8891c840, type: 3}
       propertyPath: m_LocalPosition.x
       value: -623.2172
@@ -1135,6 +1314,10 @@ PrefabInstance:
     - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_Name
       value: rus_build_9et_03b_low (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4754905513684214, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1207,6 +1390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_5et_04_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1014820857841052, guid: ba9a28fd3bfa90a4eb50a1dcc18dd5bc, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4098580027920024, guid: ba9a28fd3bfa90a4eb50a1dcc18dd5bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -362.4
@@ -1271,6 +1458,10 @@ PrefabInstance:
     - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_Name
       value: rus_build_2et_01_low (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1347,6 +1538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_9et_03b_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4754905513684214, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_LocalPosition.x
       value: -648
@@ -1407,15 +1602,15 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
 --- !u!1 &454296810 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1434324271, guid: a82b8bd77caca9d41b7475db85dd3a49,
+  m_CorrespondingSourceObject: {fileID: 5482520694164317209, guid: a82b8bd77caca9d41b7475db85dd3a49,
     type: 3}
-  m_PrefabInstance: {fileID: 1315572165}
+  m_PrefabInstance: {fileID: 5482520694047662323}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &454296821 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49,
+  m_CorrespondingSourceObject: {fileID: 5482520694164317190, guid: a82b8bd77caca9d41b7475db85dd3a49,
     type: 3}
-  m_PrefabInstance: {fileID: 1315572165}
+  m_PrefabInstance: {fileID: 5482520694047662323}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454296810}
   m_Enabled: 1
@@ -1439,6 +1634,10 @@ PrefabInstance:
     - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_Name
       value: rus_build_2et_01_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1508,6 +1707,10 @@ PrefabInstance:
     - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_Name
       value: rus_build_2et_01_low (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1584,6 +1787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_9et_03b_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4754905513684214, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_LocalPosition.x
       value: -648
@@ -1655,7 +1862,7 @@ GameObject:
   - component: {fileID: 514562886}
   m_Layer: 0
   m_Name: Terrain (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1950,6 +2157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_5et_03a_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1344908493902798, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4169983903537070, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
       propertyPath: m_LocalPosition.x
       value: -690.9
@@ -2006,6 +2217,10 @@ PrefabInstance:
     - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_Name
       value: rus_build_2et_01_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2098,6 +2313,10 @@ PrefabInstance:
     - target: {fileID: 1314652567729064, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
       propertyPath: m_Name
       value: rus_build_9et_01a_low (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314652567729064, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4144252128789790, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2309,6 +2528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01a_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1237861054706336, guid: cbccaa2c65d9da344ae788e7c199ee76, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4324183765558990, guid: cbccaa2c65d9da344ae788e7c199ee76, type: 3}
       propertyPath: m_LocalPosition.x
       value: -620.16473
@@ -2365,6 +2588,10 @@ PrefabInstance:
     - target: {fileID: 1314652567729064, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
       propertyPath: m_Name
       value: rus_build_9et_01a_low (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314652567729064, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4144252128789790, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2431,6 +2658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_9et_02b_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1242887456117474, guid: a23dbbdd521b5e341844b245d7bfc874, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4344103315331142, guid: a23dbbdd521b5e341844b245d7bfc874, type: 3}
       propertyPath: m_LocalPosition.x
       value: -395.01852
@@ -2495,6 +2726,10 @@ PrefabInstance:
     - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_Name
       value: rus_build_5et_06_low (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4603655451484844, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2576,6 +2811,10 @@ PrefabInstance:
     - target: {fileID: 1314652567729064, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
       propertyPath: m_Name
       value: rus_build_9et_01a_low (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314652567729064, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4144252128789790, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2662,6 +2901,7 @@ Transform:
   - {fileID: 1809348316}
   - {fileID: 2142001564}
   - {fileID: 934859752}
+  - {fileID: 34555913}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2675,6 +2915,10 @@ PrefabInstance:
     - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_Name
       value: rus_build_2et_01_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2757,6 +3001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_4et_01_low (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1165967738436502, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4942243433605740, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -657.43115
@@ -2820,6 +3068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_4et_01_low (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1165967738436502, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4942243433605740, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -657.43115
@@ -2876,6 +3128,10 @@ PrefabInstance:
     - target: {fileID: 1663764938233920, guid: 393bb1456e9f83948ba1f8fa7a60a21a, type: 3}
       propertyPath: m_Name
       value: rus_build_5et_05_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663764938233920, guid: 393bb1456e9f83948ba1f8fa7a60a21a, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4107907119348396, guid: 393bb1456e9f83948ba1f8fa7a60a21a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2984,6 +3240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_9et_02b_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1242887456117474, guid: a23dbbdd521b5e341844b245d7bfc874, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4344103315331142, guid: a23dbbdd521b5e341844b245d7bfc874, type: 3}
       propertyPath: m_LocalPosition.x
       value: -395.01852
@@ -3048,6 +3308,10 @@ PrefabInstance:
     - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_Name
       value: rus_build_2et_01_low (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3118,6 +3382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: prefab_FillerBuilding03
       objectReference: {fileID: 0}
+    - target: {fileID: 1509256653174142, guid: 8f6248c4d78145a4087136562ed6ed11, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4777889342677522, guid: 8f6248c4d78145a4087136562ed6ed11, type: 3}
       propertyPath: m_LocalPosition.x
       value: -421.6455
@@ -3182,6 +3450,10 @@ PrefabInstance:
     - target: {fileID: 1663764938233920, guid: 393bb1456e9f83948ba1f8fa7a60a21a, type: 3}
       propertyPath: m_Name
       value: rus_build_5et_05_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663764938233920, guid: 393bb1456e9f83948ba1f8fa7a60a21a, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4107907119348396, guid: 393bb1456e9f83948ba1f8fa7a60a21a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3250,7 +3522,7 @@ GameObject:
   - component: {fileID: 986708685}
   m_Layer: 0
   m_Name: Terrain (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3327,6 +3599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_9et_03b_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4754905513684214, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_LocalPosition.x
       value: -648
@@ -3396,6 +3672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01b_low (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1219351464806550, guid: 3498c2828d18a8b4090fe9dc8891c840, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4457829158267990, guid: 3498c2828d18a8b4090fe9dc8891c840, type: 3}
       propertyPath: m_LocalPosition.x
       value: -707.8
@@ -3464,6 +3744,10 @@ PrefabInstance:
     - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_Name
       value: rus_build_9et_03b_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4754905513684214, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3551,6 +3835,10 @@ PrefabInstance:
     - target: {fileID: 1344908493902798, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
       propertyPath: m_Name
       value: rus_build_5et_03a_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344908493902798, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4169983903537070, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3812,6 +4100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01_low (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -628.7
@@ -3886,6 +4178,10 @@ PrefabInstance:
     - target: {fileID: 1165967738436502, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
       propertyPath: m_Name
       value: rus_build_4et_01_low (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165967738436502, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4942243433605740, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4035,6 +4331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_9et_03b_low (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4754905513684214, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_LocalPosition.x
       value: -648
@@ -4116,6 +4416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -672.5455
@@ -4179,6 +4483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_4et_01_low (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1165967738436502, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4942243433605740, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -657.43115
@@ -4231,93 +4539,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 584972241}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1315572165
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1434324271, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_Name
-      value: PlayerJet
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: altitudeText
-      value: 
-      objectReference: {fileID: 1474788604}
-    - target: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: thrustText
-      value: 
-      objectReference: {fileID: 279120932}
-    - target: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: invertPitchControls
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: advancedControls
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324272, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: mouseSensitivity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -727.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 26.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -27.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1434324276, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7239613616126223240, guid: a82b8bd77caca9d41b7475db85dd3a49,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: a3ec116d50ea5d847887e4ded308e65f, type: 3}
-    - target: {fileID: 7239613616126223240, guid: a82b8bd77caca9d41b7475db85dd3a49,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.66
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
 --- !u!1001 &1319203864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4328,6 +4549,10 @@ PrefabInstance:
     - target: {fileID: 1344908493902798, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
       propertyPath: m_Name
       value: rus_build_5et_03a_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344908493902798, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4169983903537070, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4386,6 +4611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01b_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1219351464806550, guid: 3498c2828d18a8b4090fe9dc8891c840, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4457829158267990, guid: 3498c2828d18a8b4090fe9dc8891c840, type: 3}
       propertyPath: m_LocalPosition.x
       value: -425.3
@@ -4443,7 +4672,7 @@ GameObject:
   - component: {fileID: 1340807218}
   m_Layer: 0
   m_Name: Neighborhood 1
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4571,6 +4800,85 @@ Transform:
   m_Father: {fileID: 752938789}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1424461762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1424461763}
+  - component: {fileID: 1424461765}
+  - component: {fileID: 1424461764}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1424461763
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424461762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1957787922}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1424461764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424461762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Start Game
+--- !u!222 &1424461765
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424461762}
+  m_CullTransparentMesh: 0
 --- !u!4 &1431277246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0,
@@ -4593,6 +4901,10 @@ PrefabInstance:
     - target: {fileID: 1237861054706336, guid: cbccaa2c65d9da344ae788e7c199ee76, type: 3}
       propertyPath: m_Name
       value: rus_build_2et_01a_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237861054706336, guid: cbccaa2c65d9da344ae788e7c199ee76, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4324183765558990, guid: cbccaa2c65d9da344ae788e7c199ee76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4858,6 +5170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01a_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1237861054706336, guid: cbccaa2c65d9da344ae788e7c199ee76, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4324183765558990, guid: cbccaa2c65d9da344ae788e7c199ee76, type: 3}
       propertyPath: m_LocalPosition.x
       value: -620.16473
@@ -4967,6 +5283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_5et_06_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4603655451484844, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -389.18103
@@ -5029,6 +5349,10 @@ PrefabInstance:
     - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_Name
       value: rus_build_5et_06_low (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4603655451484844, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5104,6 +5428,10 @@ PrefabInstance:
     - target: {fileID: 1165967738436502, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
       propertyPath: m_Name
       value: rus_build_4et_01_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165967738436502, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4942243433605740, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5242,6 +5570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_9et_01a_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1314652567729064, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4144252128789790, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -677.5
@@ -5307,6 +5639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_5et_03a_low (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1344908493902798, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4169983903537070, guid: 5a760ff159dab1f45a917cb73f9ceb03, type: 3}
       propertyPath: m_LocalPosition.x
       value: -690.9
@@ -5364,6 +5700,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_9et_01a_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1314652567729064, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4144252128789790, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -704.26776
@@ -5420,6 +5760,10 @@ PrefabInstance:
     - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_Name
       value: rus_build_5et_06_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4603655451484844, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5692,6 +6036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01_low (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -429.1
@@ -5852,6 +6200,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_9et_01a_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1314652567729064, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4144252128789790, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -677.5
@@ -5947,6 +6299,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01_low (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -705.2
@@ -6016,6 +6372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_9et_02b_low (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1242887456117474, guid: a23dbbdd521b5e341844b245d7bfc874, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4344103315331142, guid: a23dbbdd521b5e341844b245d7bfc874, type: 3}
       propertyPath: m_LocalPosition.x
       value: -395.01852
@@ -6070,6 +6430,124 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23dbbdd521b5e341844b245d7bfc874, type: 3}
+--- !u!1 &1957787921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1957787922}
+  - component: {fileID: 1957787925}
+  - component: {fileID: 1957787924}
+  - component: {fileID: 1957787923}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1957787922
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957787921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1424461763}
+  m_Father: {fileID: 144905969}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1957787923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957787921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1957787924}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1957787924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957787921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: e1d20b8c58c429947b53c1ba74a961ae, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1957787925
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957787921}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1964148823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6080,6 +6558,10 @@ PrefabInstance:
     - target: {fileID: 1237861054706336, guid: cbccaa2c65d9da344ae788e7c199ee76, type: 3}
       propertyPath: m_Name
       value: rus_build_2et_01a_low (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237861054706336, guid: cbccaa2c65d9da344ae788e7c199ee76, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4324183765558990, guid: cbccaa2c65d9da344ae788e7c199ee76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6143,6 +6625,10 @@ PrefabInstance:
     - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_Name
       value: rus_build_5et_06_low (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4603655451484844, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6213,6 +6699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01c_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1338919870457576, guid: 113399417063b314caa81e403a2b62f0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4931265804279346, guid: 113399417063b314caa81e403a2b62f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -782.7354
@@ -6281,6 +6771,10 @@ PrefabInstance:
     - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_Name
       value: rus_build_5et_06_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325548845028452, guid: c410004c513d4f443a09614a36f7208d, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4603655451484844, guid: c410004c513d4f443a09614a36f7208d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6363,6 +6857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -678.47644
@@ -6431,6 +6929,10 @@ PrefabInstance:
     - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_Name
       value: rus_build_2et_01_low (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6565,6 +7067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_9et_01a_low (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1314652567729064, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4144252128789790, guid: 5a675dcfe669d5e4e93d9c677c628ba6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -677.5
@@ -6642,6 +7148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rus_build_2et_01_low (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284506016227826, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 4091835743082968, guid: f2ac51e00e24ec74295d01a4e5752ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -662.8
@@ -6716,6 +7226,10 @@ PrefabInstance:
     - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_Name
       value: rus_build_9et_03b_low (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1026770149594144, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4754905513684214, guid: 96f5c8fbe4b7c0141b5ba8c462960028, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6983,6 +7497,85 @@ PrefabInstance:
       objectReference: {fileID: 454296810}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a592b4ae58bc844f89703e83739d43c, type: 3}
+--- !u!1001 &5482520694047662323
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5482520694164317209, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerJet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317186, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -727.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317186, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 26.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317186, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -27.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317186, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317186, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317186, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317186, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317186, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317186, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317186, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317186, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482520694164317190, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: altitudeText
+      value: 
+      objectReference: {fileID: 1474788604}
+    - target: {fileID: 5482520694164317190, guid: a82b8bd77caca9d41b7475db85dd3a49,
+        type: 3}
+      propertyPath: thrustText
+      value: 
+      objectReference: {fileID: 279120932}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a82b8bd77caca9d41b7475db85dd3a49, type: 3}
 --- !u!1001 &6412903475276742763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7054,6 +7647,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412903474749076673, guid: cb9120cda1d1f40498ff6d3fb5949ff6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6412903474749076677, guid: cb9120cda1d1f40498ff6d3fb5949ff6,
         type: 3}

@@ -7,7 +7,7 @@ using UnityEngine.Rendering.PostProcessing;
 public class Movement : MonoBehaviour
 {
     [System.NonSerialized]
-    public bool paused;
+    public bool paused = false;
     public bool advancedControls = false;
     public bool invertPitchControls = true;
     public float mouseSensitivity = 1;
@@ -22,6 +22,8 @@ public class Movement : MonoBehaviour
     //components
     public Text altitudeText;
     public Text thrustText;
+
+    public GameObject explosionPrefab;
 
     //vfx and sfx 
     protected Rigidbody rb;
@@ -45,7 +47,7 @@ public class Movement : MonoBehaviour
         vignette = postProcessProfile.GetSetting<Vignette>();
         vignette.intensity.value = 0.3f;
         audioSource = GetComponent<AudioSource>();
-
+        audioSource.Pause();
     }
 
     void FixedUpdate()
@@ -256,11 +258,13 @@ public class Movement : MonoBehaviour
     {
         if (paused)
         {
+            Debug.Log("Unpausing");
             audioSource.Play();
             paused = false;
         }
         else
         {
+            Debug.Log("Pausing");
             audioSource.Pause();
             paused = true;
         }
@@ -273,7 +277,8 @@ public class Movement : MonoBehaviour
         if(collision.gameObject.tag == "Terrain")
         {
             Debug.Log("Crash");
-            vignette.intensity.value = 1;
+            //vignette.intensity.value = 1;
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         }
 
     }
