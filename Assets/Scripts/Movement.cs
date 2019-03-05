@@ -31,6 +31,7 @@ public class Movement : MonoBehaviour
     protected Vignette vignette;
     public PostProcessProfile postProcessProfile;
     protected AudioSource audioSource;
+    Shoot shooter;
 
     //for getting mouse position on screen
     protected readonly float centerOfScreenX = Screen.width / 2;
@@ -48,6 +49,7 @@ public class Movement : MonoBehaviour
         vignette = postProcessProfile.GetSetting<Vignette>();
         vignette.intensity.value = 0.3f;
         audioSource = GetComponent<AudioSource>();
+        shooter = GetComponentInChildren<Shoot>();
         audioSource.Pause();
     }
 
@@ -263,12 +265,16 @@ public class Movement : MonoBehaviour
         {
             Debug.Log("Unpausing");
             audioSource.Play();
+            shooter.paused = false;
             paused = false;
+
+
         }
         else
         {
             Debug.Log("Pausing");
             audioSource.Pause();
+            shooter.paused = true;
             paused = true;
         }
     }
@@ -285,6 +291,7 @@ public class Movement : MonoBehaviour
             TogglePause();
             MeshRenderer mr = GetComponent<MeshRenderer>();
             mr.enabled = false;
+
 
             StartCoroutine(LoadAfterDelay());
         }
