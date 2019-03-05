@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    public Camera controlCamera;
+    public Camera menuCamera;
 
     public void ChangeScene(string sceneName)
     {
@@ -18,10 +20,16 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    private void Start()
+    public void ShowControls()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
+        menuCamera.gameObject.SetActive(false);
+        controlCamera.gameObject.SetActive(true);
+    }
 
+    public void ShowMenu()
+    {
+        menuCamera.gameObject.SetActive(true);
+        controlCamera.gameObject.SetActive(false);
     }
 }
 

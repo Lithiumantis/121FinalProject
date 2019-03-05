@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -247,8 +248,10 @@ public class Movement : MonoBehaviour
 
     protected void UpdateUI()
     {
-        altitudeText.text = "ALT\n" + transform.position.y;
-        thrustText.text = "SPEED\n" + thrust * 1000f;
+        if(altitudeText != null)
+            altitudeText.text = "ALT\n" + transform.position.y;
+        if (thrustText != null)
+            thrustText.text = "SPEED\n" + thrust * 1000f;
         audioSource.volume = (thrust + 0.5f) / maxthrust;
         audioSource.pitch = (thrust + 0.5f) / maxthrust;
         
@@ -279,6 +282,11 @@ public class Movement : MonoBehaviour
             Debug.Log("Crash");
             //vignette.intensity.value = 1;
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            TogglePause();
+            MeshRenderer mr = GetComponent<MeshRenderer>();
+            mr.enabled = false;
+
+            StartCoroutine(LoadAfterDelay());
         }
 
     }
@@ -286,5 +294,12 @@ public class Movement : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         Debug.Log("Hit by particle");
+    }
+
+    private IEnumerator LoadAfterDelay()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Menu");
+
     }
 }
