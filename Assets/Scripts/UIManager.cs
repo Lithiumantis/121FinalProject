@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public Movement player;
     public AudioSource musicPlayer;
     public Text pauseText;
+    public Timer timer;
 
     bool paused;
 
@@ -18,6 +19,7 @@ public class UIManager : MonoBehaviour
         musicPlayer.Pause();
         pauseText.gameObject.SetActive(true);
         paused = true;
+        timer.paused = true;
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class UIManager : MonoBehaviour
         {
             player.TogglePause();
             musicPlayer.Pause();
+            timer.paused = true;
             pauseText.gameObject.SetActive(true);
             Time.timeScale = 0;
             paused = true;
@@ -36,6 +39,7 @@ public class UIManager : MonoBehaviour
         {
             player.TogglePause();
             musicPlayer.Play();
+            timer.paused = false;
             pauseText.gameObject.SetActive(false);
             Time.timeScale = 1;
             paused = false;

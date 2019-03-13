@@ -9,6 +9,10 @@ public class PickerUpper : MonoBehaviour
     private Movement movement;
     private int score = 0;
     private float thrust;
+    public DeliveryManager deliveryManager;
+    public GameObject destination;
+
+    bool hasItem;
 
     private AudioSource beepAudio;
 
@@ -17,6 +21,7 @@ public class PickerUpper : MonoBehaviour
     {
         movement = GetComponentInParent<Movement>();
         beepAudio = GetComponent<AudioSource>();
+        scoreText.text = "";
     }
 
     // Update is called once per frame
@@ -30,12 +35,23 @@ public class PickerUpper : MonoBehaviour
         Debug.Log("pickup collision");
         if (other.gameObject.tag == "Pickup")
         {
-            score += (int)(thrust * 1000);
-            scoreText.text = score.ToString();
+            //score += (int)(thrust * 1000);
+            scoreText.text = "Item collected";
+            hasItem = true;
+            destination.SetActive(true);
+
+            ItemSpawner spawner = other.gameObject.GetComponentInParent<ItemSpawner>();
+            spawner.SendCollectSignal();
             Destroy(other.gameObject);
-
             beepAudio.Play();
-
+        }
+        else if (other.gameObject.tag == "DeliveryTarget" && hasItem)
+        {
+            destination.SetActive(false);
+            deliveryManager.OnItemCollected();
+            hasItem = false;
+            beepAudio.Play();
+            scoreText.text = "";
         }
     }
 }

@@ -9,6 +9,10 @@ public class MenuManager : MonoBehaviour
 {
     public Camera controlCamera;
     public Camera menuCamera;
+    public Settings settings;
+
+    public Image invertYImage;
+    private bool yToggled = false;
 
     public void ChangeScene(string sceneName)
     {
@@ -30,6 +34,22 @@ public class MenuManager : MonoBehaviour
     {
         menuCamera.gameObject.SetActive(true);
         controlCamera.gameObject.SetActive(false);
+    }
+
+    public void ToggleY()
+    {
+        if (!yToggled)
+        {
+            settings.invertY = true;
+            invertYImage.color = Color.red;
+            yToggled = true;
+        }
+        else
+        {
+            settings.invertY = false;
+            invertYImage.color = Color.white;
+            yToggled = false;
+        }
     }
 }
 

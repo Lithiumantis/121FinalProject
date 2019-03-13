@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 42031529}
   - component: {fileID: 42031528}
   m_Layer: 5
-  m_Name: ToggleY
+  m_Name: InvertY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,8 +293,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1947988107}
-        m_MethodName: ChangeScene
-        m_Mode: 5
+        m_MethodName: ToggleY
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1720,7 +1720,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ea19569c76ff1f94183287e29ff6f8a5, type: 3}
+    m_Font: {fileID: 12800000, guid: 4a2f6269beae753439089fa09e3da75b, type: 3}
     m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
@@ -2328,7 +2328,7 @@ Transform:
   m_Children:
   - {fileID: 907000552}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &601150192
 PrefabInstance:
@@ -2518,7 +2518,7 @@ RectTransform:
   m_Children:
   - {fileID: 999215316}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2731,7 +2731,7 @@ Transform:
   - {fileID: 514562885}
   - {fileID: 11028443}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &754790102 stripped
 Transform:
@@ -3123,7 +3123,7 @@ Transform:
   - {fileID: 2142001564}
   - {fileID: 1947988106}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &854918880 stripped
 Transform:
@@ -3569,7 +3569,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ea19569c76ff1f94183287e29ff6f8a5, type: 3}
+    m_Font: {fileID: 12800000, guid: 4a2f6269beae753439089fa09e3da75b, type: 3}
     m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
@@ -5055,6 +5055,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbccaa2c65d9da344ae788e7c199ee76, type: 3}
+--- !u!1 &1504348508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1504348509}
+  - component: {fileID: 1504348510}
+  m_Layer: 0
+  m_Name: Settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1504348509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504348508}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 927.6233, y: 928.967, z: -17.72998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1504348510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504348508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4efa53b948e1cf44f8b8a5cf1123c9a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invertY: 0
 --- !u!1 &1527518656
 GameObject:
   m_ObjectHideFlags: 0
@@ -5197,7 +5241,7 @@ Transform:
   m_Children:
   - {fileID: 144905969}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 65.136, z: 0}
 --- !u!1 &1551227831
 GameObject:
@@ -5328,7 +5372,7 @@ Transform:
   - {fileID: 2086968824}
   - {fileID: 88951567}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1590836638 stripped
 Transform:
@@ -5527,7 +5571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4942243433605740, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4942243433605740, guid: 8dca6652d4a69d04b9cecde06ac6ddf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5784,7 +5828,7 @@ Transform:
   - {fileID: 417571670}
   - {fileID: 635829913}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1809348314
 GameObject:
@@ -6209,6 +6253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlCamera: {fileID: 590686577}
   menuCamera: {fileID: 1527518659}
+  settings: {fileID: 1504348510}
+  invertYImage: {fileID: 42031530}
 --- !u!1 &1957787921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6956,7 +7002,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Toggle Y Axis
+  m_Text: Invert Y Axis
 --- !u!222 &2071348562
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7183,7 +7229,7 @@ Transform:
   - {fileID: 1908840293}
   - {fileID: 648105624}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &2142001561
 GameObject:

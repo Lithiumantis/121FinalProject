@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
 {
     [System.NonSerialized]
     public bool paused = false;
+    private bool crashed = false;
     public bool advancedControls = false;
     public bool invertPitchControls = true;
     public float mouseSensitivity = 1;
@@ -25,6 +26,7 @@ public class Movement : MonoBehaviour
     public Text thrustText;
 
     public GameObject explosionPrefab;
+    public AudioClip explosionSound;
 
     //vfx and sfx 
     protected Rigidbody rb;
@@ -51,6 +53,26 @@ public class Movement : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         shooter = GetComponentInChildren<Shoot>();
         audioSource.Pause();
+
+    }
+
+    private void Awake()
+    {
+        //get y invert
+        GameObject settingsObject = GameObject.Find("Settings");
+
+        if(settingsObject != null)
+        {
+            Settings settings = settingsObject.GetComponent<Settings>();
+
+            if (settings != null)
+                invertPitchControls = settings.invertY;
+
+            Destroy(settingsObject);
+        }
+
+
+
     }
 
     void FixedUpdate()
@@ -264,7 +286,8 @@ public class Movement : MonoBehaviour
         if (paused)
         {
             Debug.Log("Unpausing");
-            audioSource.Play();
+            if(!crashed)
+                audioSource.Play();
             shooter.paused = false;
             paused = false;
 
@@ -273,7 +296,8 @@ public class Movement : MonoBehaviour
         else
         {
             Debug.Log("Pausing");
-            audioSource.Pause();
+            if (!crashed)
+                audioSource.Pause();
             shooter.paused = true;
             paused = true;
         }
@@ -286,12 +310,15 @@ public class Movement : MonoBehaviour
         if(collision.gameObject.tag == "Terrain")
         {
             Debug.Log("Crash");
+            crashed = true;
             //vignette.intensity.value = 1;
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             TogglePause();
             MeshRenderer mr = GetComponent<MeshRenderer>();
             mr.enabled = false;
-
+            audioSource.clip = explosionSound;
+            audioSource.loop = false;
+            audioSource.Play();
 
             StartCoroutine(LoadAfterDelay());
         }
