@@ -51,7 +51,6 @@ public class PickerUpper : MonoBehaviour
             deliveryManager.OnItemCollected();
             hasItem = false;
             beepAudio.Play();
-            scoreText.text = "";
         }
     }
 }

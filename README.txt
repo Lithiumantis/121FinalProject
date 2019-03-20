@@ -3,6 +3,7 @@ Credits:
 Laser3 by nsstudios
 Tone Beep by Pan14
 Explosion by Iwiploppenisse
+Bullet Impact by coolguy244e
 Jet Engine Airplane Interior by deckycoss
 Russian Buildings LowPoly by MadMedicSoft
 Windridge City by Unity Technologies

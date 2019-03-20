@@ -156,7 +156,18 @@ public class Movement : MonoBehaviour
 
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, maxRoll * GetMousePercentageX()); //roll
 
-            transform.Rotate(2 * y, 0, 0, Space.Self); // pitch
+            //Debug.Log(transform.localEulerAngles.x);
+            
+            if(transform.localEulerAngles.x <= 85)
+                transform.Rotate(2 * y, 0, 0, Space.Self); // pitch
+            else if (transform.localEulerAngles.x >= 275)
+                transform.Rotate(2 * y, 0, 0, Space.Self); // pitch
+            else if(transform.localEulerAngles.x <= 275 && transform.localEulerAngles.x >= 180 && y >= 0)
+                transform.Rotate(2 * y, 0, 0, Space.Self); // pitch
+            else if (transform.localEulerAngles.x >= 85 && transform.localEulerAngles.x <= 180 && y <= 0)
+                transform.Rotate(2 * y, 0, 0, Space.Self); // pitch
+                
+
 
             //forward thrust
             rb.MovePosition(transform.position + transform.forward * baseSpeed * thrust * Time.deltaTime);
