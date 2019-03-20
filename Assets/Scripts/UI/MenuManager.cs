@@ -13,6 +13,7 @@ public class MenuManager : MonoBehaviour
 
     public Image invertYImage;
     private bool yToggled = false;
+    public AudioSource clickAudio;
 
     public void ChangeScene(string sceneName)
     {
@@ -50,6 +51,11 @@ public class MenuManager : MonoBehaviour
             invertYImage.color = Color.white;
             yToggled = false;
         }
+    }
+
+    public void OnClick()
+    {
+        clickAudio.Play();
     }
 }
 

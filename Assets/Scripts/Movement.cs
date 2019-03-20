@@ -20,13 +20,17 @@ public class Movement : MonoBehaviour
     public float thrustRestingPoint = 1.5f;
     public float maxthrust = 5f;
     public float minthrust = 0.25f;
+    public int maxHealth = 5;
+    private int health = 5;
 
     //components
     public Text altitudeText;
     public Text thrustText;
+    public Slider hpSlider;
 
     public GameObject explosionPrefab;
     public AudioClip explosionSound;
+    public AudioSource globalHitPlayer;
 
     //vfx and sfx 
     protected Rigidbody rb;
@@ -44,6 +48,7 @@ public class Movement : MonoBehaviour
     Vector3 rotateValue;
     Vector3 rollValue;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +58,8 @@ public class Movement : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         shooter = GetComponentInChildren<Shoot>();
         audioSource.Pause();
+
+        health = maxHealth;
 
     }
 
@@ -70,15 +77,11 @@ public class Movement : MonoBehaviour
 
             Destroy(settingsObject);
         }
-
-
-
     }
 
     void FixedUpdate()
     {
         if (!advancedControls) StandardMovement();
-        else AdvancedMovement();
 
     }
 
@@ -176,92 +179,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-    protected void AdvancedMovement()
-    {
-        //Debug.Log(GetMousePercentageX());
-        if (!paused)
-        {
-            //movement variables
-            float x; float y; float z;
-
-
-            //mouse input
-            GetMousePosNormalized();
-            y = mouseY;
-            x = mouseX;
-
-            // GET ROLL
-            float manualRoll = 0.75f * Input.GetAxis("Roll");
-
-            //Case 1: Within acceptable zones for mouse movement
-            if (transform.eulerAngles.z < maxRoll || transform.eulerAngles.z > (360 - maxRoll))
-            {
-                z = 2 * Input.GetAxis("Mouse X") + manualRoll;
-            }
-            //Case 2: Too far to the right, but moving left
-            else if ((transform.eulerAngles.z > 180f && transform.eulerAngles.z < (360 - maxRoll)) && Input.GetAxis("Mouse X") <= 0f)
-            {
-                z = 2 * Input.GetAxis("Mouse X") + manualRoll;
-            }
-            //Case 3: Too far to the left, but moving right
-            else if ((transform.eulerAngles.z > maxRoll && transform.eulerAngles.z < 180f) && Input.GetAxis("Mouse X") >= 0f)
-            {
-                z = 2 * Input.GetAxis("Mouse X") + manualRoll;
-            }
-            else
-            {
-                z = 0 + manualRoll;
-            }
-
-            // GET THRUST, RESET TO REST POINT IF NO INPUT
-            if (Input.GetAxis("Vertical") != 0)
-            {
-                thrust += Input.GetAxis("Vertical") * 0.07f;
-                if (thrust < minthrust) thrust = minthrust;
-                if (thrust > maxthrust) thrust = maxthrust;
-            }
-            else if (Input.GetAxis("Vertical") == 0 && thrust > thrustRestingPoint)
-            {
-                thrust -= 0.05f;
-                if (thrust < thrustRestingPoint)
-                {
-                    thrust = thrustRestingPoint;
-                }
-            }
-            else if (Input.GetAxis("Vertical") == 0 && thrust < thrustRestingPoint)
-            {
-                thrust += 0.05f;
-                if (thrust > thrustRestingPoint)
-                {
-                    thrust = thrustRestingPoint;
-                }
-            }
-
-
-            if (!invertPitchControls)
-            {
-                y = -y;
-            }
-
-            //rotation
-            
-            rotateValue = new Vector3(0, x * -1.5f, 2*z); //(0, yaw, roll)
-            transform.localEulerAngles = transform.localEulerAngles - rotateValue;
-            transform.Rotate(2*y, 0, 0, Space.Self); // pitch
-            /*
-            rotateValue = new Vector3(0, x * -1.5f, 0); //yaw
-            transform.localEulerAngles = transform.localEulerAngles - rotateValue;
-            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, maxRoll * GetMousePercentageX()); //roll
-            transform.Rotate(2 * y, 0, 0, Space.Self); // pitch
-            */
-
-            //forward thrust
-            rb.MovePosition(transform.position + transform.forward * baseSpeed * thrust * Time.deltaTime);
-
-            UpdateUI();
-        }
-    }
-
     protected void GetMousePosNormalized()
     {
         mouseY = 4f * (Input.mousePosition.y - centerOfScreenY) / Screen.height;
@@ -320,13 +237,41 @@ public class Movement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Terrain")
         {
-            Debug.Log("Crash");
+            Explode();
+        }
+
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        health--;
+        hpSlider.value = health;
+
+        if (health > 0)
+        {
+            globalHitPlayer.Play();
+        }
+        if(health <= 0)
+        {
+            Explode();
+        }
+    }
+
+    private void Explode()
+    {
+        if (!crashed)
+        {
+            hpSlider.value = 0;
             crashed = true;
+
+
             //vignette.intensity.value = 1;
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             TogglePause();
+
             MeshRenderer mr = GetComponent<MeshRenderer>();
             mr.enabled = false;
+
             audioSource.clip = explosionSound;
             audioSource.loop = false;
             audioSource.Play();
@@ -336,15 +281,12 @@ public class Movement : MonoBehaviour
 
     }
 
-    private void OnParticleCollision(GameObject other)
-    {
-        Debug.Log("Hit by particle");
-    }
-
     private IEnumerator LoadAfterDelay()
     {
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene("Menu");
 
     }
+
+
 }
